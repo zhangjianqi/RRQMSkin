@@ -4,26 +4,15 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using RRQMSkin.Controls;
 
 namespace RRQMSkin.Charts.Primitives
 {
     /// <summary>
     /// 环形文字
     /// </summary>
-    public class DialText : Control
+    public class DialText : RRQMControl
     {
-        /// <summary>
-        ///
-        /// </summary>
-        public DialText()
-        {
-            this.SizeChanged += Sector_SizeChanged;
-        }
-
-        private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            this.InvalidateVisual();
-        }
 
         /// <summary>
         ///
@@ -31,6 +20,10 @@ namespace RRQMSkin.Charts.Primitives
         /// <param name="drawingContext"></param>
         protected sealed override void OnRender(DrawingContext drawingContext)
         {
+            if (this.Text == null||this.Text.Length==0)
+            {
+                return;
+            }
             double radius = Math.Min(this.ActualHeight, this.ActualWidth) / 2;
             if (radius > 0)
             {

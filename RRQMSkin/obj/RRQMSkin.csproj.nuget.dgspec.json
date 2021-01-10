@@ -50,6 +50,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "RRQMMVVM": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -72,10 +78,22 @@
         },
         "net45": {
           "targetAlias": "net45",
+          "dependencies": {
+            "RRQMMVVM": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         },
         "net461": {
           "targetAlias": "net461",
+          "dependencies": {
+            "RRQMMVVM": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }

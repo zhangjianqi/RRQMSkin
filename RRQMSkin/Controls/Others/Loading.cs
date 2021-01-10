@@ -11,7 +11,7 @@ namespace RRQMSkin.Controls
     /// <summary>
     /// 正在加载
     /// </summary>
-    public class Loading : Control
+    public class Loading : RRQMControl
     {
         static Loading()
         {
@@ -29,10 +29,7 @@ namespace RRQMSkin.Controls
             this.sector = (Sector)this.Template.FindName("sector", this);
         }
 
-        private bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(this); }
-        }
+
 
         /// <summary>
         /// 前景色
@@ -119,26 +116,20 @@ namespace RRQMSkin.Controls
                 {
                     if (loading.IsLoading)
                     {
-                        DoubleAnimation doubleAnimationStart = new DoubleAnimation();
-                        doubleAnimationStart.Duration = loading.Duration;
-                        doubleAnimationStart.From = 0;
-                        doubleAnimationStart.To = 360;
+                        DoubleAnimation animation = new DoubleAnimation();
+                        animation.To = 360;
+                        animation.RepeatBehavior = RepeatBehavior.Forever;
+                        animation.Duration = loading.Duration;
 
-                        DoubleAnimation doubleAnimationEnd = new DoubleAnimation();
-                        doubleAnimationEnd.Duration = loading.Duration;
-                        doubleAnimationEnd.From = loading.sector.EndAngle;
-                        doubleAnimationEnd.To = 360 + loading.sector.EndAngle;
-
-                        doubleAnimationStart.RepeatBehavior = RepeatBehavior.Forever;
-                        doubleAnimationEnd.RepeatBehavior = RepeatBehavior.Forever;
-
-                        loading.sector.BeginAnimation(Sector.StartAngleProperty, doubleAnimationStart);
-                        loading.sector.BeginAnimation(Sector.EndAngleProperty, doubleAnimationEnd);
+                        RotateTransform rotateTransform = new RotateTransform();
+                        rotateTransform.CenterX = loading.ActualWidth/2;
+                        rotateTransform.CenterY = loading.ActualHeight/2;
+                        loading.sector.RenderTransform = rotateTransform;
+                        rotateTransform.BeginAnimation(RotateTransform.AngleProperty,animation);
                     }
                     else
                     {
-                        loading.sector.BeginAnimation(Sector.StartAngleProperty, null);
-                        loading.sector.BeginAnimation(Sector.EndAngleProperty, null);
+                        loading.sector.RenderTransform=null;
                     }
                 }
             }

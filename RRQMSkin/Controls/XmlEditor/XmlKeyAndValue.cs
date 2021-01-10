@@ -1,17 +1,20 @@
-﻿namespace RRQMSkin.Controls
+﻿using System.Windows.Input;
+using RRQMMVVM;
+
+namespace RRQMSkin.Controls
 {
-    public class XmlKeyAndValue : ModelBase
+    public class XmlKeyAndValue : ObservableObject
     {
         public XmlKeyAndValue()
         {
-            this.RemoveCommand = new Command(Remove);
+            this.RemoveCommand = new ExecuteCommand(Remove);
         }
 
         public event XmlEdit XmlEdited;
 
         public XmlTreeView Parent { get; set; }
 
-        public Command RemoveCommand { get; set; }
+        public ExecuteCommand RemoveCommand { get; set; }
 
         private string key;
 

@@ -8,36 +8,21 @@ namespace RRQMSkin.Controls
     /// <summary>
     /// 速度表盘
     /// </summary>
-    public class SpeedDial : Control
+    public class SpeedDial : RRQMControl
     {
         static SpeedDial()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SpeedDial), new FrameworkPropertyMetadata(typeof(SpeedDial)));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        public SpeedDial()
-        {
-            this.SizeChanged += SpeedDial_SizeChanged;
-        }
-
-        private void SpeedDial_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            double radius = Math.Min(this.ActualHeight, this.ActualWidth) / 2;
-            pointer.PointerWidth = radius / 300 * 300;
-        }
-
-        private Pointer pointer;
-
+       
         /// <summary>
         ///
         /// </summary>
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            pointer = (Pointer)this.Template.FindName("pointer", this);
+          
         }
 
         /// <summary>

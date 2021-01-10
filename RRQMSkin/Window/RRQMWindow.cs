@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shell;
+using RRQMMVVM;
 
 namespace RRQMSkin.Windows
 {
@@ -43,9 +44,9 @@ namespace RRQMSkin.Windows
             cloImage.Source = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/icons/关闭.png", UriKind.RelativeOrAbsolute));
             this.CloseButtonContent = cloImage;
 
-            MinWindowCommand = new Command(() => { this.WindowState = WindowState.Minimized; });
-            MaxOrNormalWindowCommand = new Command(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
-            CloseWindowCommand = new Command(() => { this.Close(); });
+            MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
+            MaxOrNormalWindowCommand = new ExecuteCommand(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
+            CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
 
             WindowChrome windowChrome = new WindowChrome();
             windowChrome.CaptionHeight = 0;
@@ -58,9 +59,9 @@ namespace RRQMSkin.Windows
             OnStateChanged(e);
         }
 
-        protected bool mRestoreForDragMove;
-        protected Grid titleGrid;
-        protected Border mainBorder;
+        private bool mRestoreForDragMove;
+        private Grid titleGrid;
+        private Border mainBorder;
 
         public override void OnApplyTemplate()
         {
@@ -233,9 +234,9 @@ namespace RRQMSkin.Windows
 
         #region Command
 
-        public Command MinWindowCommand { get; set; }
-        public Command MaxOrNormalWindowCommand { get; set; }
-        public Command CloseWindowCommand { get; set; }
+        public ExecuteCommand MinWindowCommand { get; set; }
+        public ExecuteCommand MaxOrNormalWindowCommand { get; set; }
+        public ExecuteCommand CloseWindowCommand { get; set; }
 
         #endregion Command
 

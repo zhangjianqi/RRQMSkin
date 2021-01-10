@@ -10,8 +10,9 @@ namespace RRQMSkin.DragDrop
             while (obj != null)
             {
                 if (obj is T)
+                {
                     return obj as T;
-
+                }
                 obj = VisualTreeHelper.GetParent(obj);
             }
 

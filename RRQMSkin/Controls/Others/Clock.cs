@@ -9,7 +9,7 @@ namespace RRQMSkin.Controls
     /// <summary>
     /// 时钟
     /// </summary>
-    public class Clock : Control
+    public class Clock : RRQMControl
     {
         static Clock()
         {
@@ -19,35 +19,11 @@ namespace RRQMSkin.Controls
         /// <summary>
         ///
         /// </summary>
-        public Clock()
-        {
-            this.SizeChanged += Clock_SizeChanged;
-        }
-
-        private void Clock_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            ClockUpdata();
-        }
-
-        private void ClockUpdata()
-        {
-            double max = Math.Min(this.ActualHeight, this.ActualWidth);
-            secondPointer.PointerWidth = 160 / 300.0 * max;
-            minutePointer.PointerWidth = 130 / 300.0 * max;
-            hourPointer.PointerWidth = 80 / 300.0 * max;
-
-            hourDial.InvalidateVisual();
-            minuteDial.InvalidateVisual();
-            dialText.InvalidateVisual();
-        }
+      
 
         private Pointer secondPointer;
         private Pointer minutePointer;
         private Pointer hourPointer;
-        private Dial hourDial;
-        private Dial minuteDial;
-        private DialText dialText;
-
         /// <summary>
         ///
         /// </summary>
@@ -58,9 +34,6 @@ namespace RRQMSkin.Controls
             secondPointer = (Pointer)this.Template.FindName("secondPointer", this);
             minutePointer = (Pointer)this.Template.FindName("minutePointer", this);
             hourPointer = (Pointer)this.Template.FindName("hourPointer", this);
-            hourDial = (Dial)this.Template.FindName("hourDial", this);
-            minuteDial = (Dial)this.Template.FindName("minuteDial", this);
-            dialText = (DialText)this.Template.FindName("dialText", this);
         }
 
         /// <summary>

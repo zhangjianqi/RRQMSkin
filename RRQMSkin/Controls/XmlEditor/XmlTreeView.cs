@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using RRQMMVVM;
 
 namespace RRQMSkin.Controls
 {
@@ -16,8 +17,8 @@ namespace RRQMSkin.Controls
         public XmlTreeView()
         {
             this.XmlEdited += RecipeTreeViewGroup_XmlEdited;
-            this.RemoveNodeCommand = new Command(RemoveNode);
-            this.AddCommand = new Command(Add);
+            this.RemoveNodeCommand = new ExecuteCommand(RemoveNode);
+            this.AddCommand = new ExecuteCommand(Add);
         }
 
         protected override void OnExpanded(RoutedEventArgs e)
@@ -165,8 +166,8 @@ namespace RRQMSkin.Controls
             }
         }
 
-        public Command RemoveNodeCommand { get; set; }
-        public Command AddCommand { get; set; }
+        public ExecuteCommand RemoveNodeCommand { get; set; }
+        public ExecuteCommand AddCommand { get; set; }
 
         public event XmlEdit XmlEdited;
 

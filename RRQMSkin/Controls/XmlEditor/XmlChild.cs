@@ -2,7 +2,7 @@
 
 namespace RRQMSkin.Controls
 {
-    internal class XmlChild : ModelBase
+    internal class XmlChild : RRQMMVVM.ObservableObject
     {
         private bool expanderVisibility;
 

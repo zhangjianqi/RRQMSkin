@@ -9,19 +9,7 @@ namespace RRQMSkin.Charts.Primitives
     /// </summary>
     public class Pointer : RRQMShape
     {
-        /// <summary>
-        ///
-        /// </summary>
-        public Pointer()
-        {
-            this.SizeChanged += Sector_SizeChanged;
-        }
-
-        private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            this.InvalidateVisual();
-        }
-
+       
         /// <summary>
         ///
         /// </summary>

@@ -60,7 +60,6 @@ namespace RRQMSkin.Windows
             this.ShadowBlurRadius = 10.0;
             base.AllowsTransparency = true;
             this.Loaded += RRQMWindow_Loaded;
-
             WindowChrome windowChrome = new WindowChrome();
             windowChrome.ResizeBorderThickness = new Thickness(0);
             this.SetValue(WindowChrome.WindowChromeProperty, null);
@@ -123,7 +122,7 @@ namespace RRQMSkin.Windows
 
         #region Methods
 
-        //}
+        private Border mainBorder;
         /// <summary>
         ///
         /// </summary>
@@ -372,13 +371,6 @@ namespace RRQMSkin.Windows
             }
         }
 
-        //private void titleGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    if (e.ButtonState == MouseButtonState.Pressed)
-        //    {
-        //        mRestoreForDragMove = WindowState == WindowState.Maximized;
-        //        DragMove();
-        //    }
         private void ResizeWindow(ResizeDirection direction)
         {
             SendMessage(_hwndSource.Handle, 0x112, (IntPtr)(61440 + direction), IntPtr.Zero);

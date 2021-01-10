@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Markup;
 
+[assembly: XmlnsDefinitionAttribute("若汝棋茗_Windows", "RRQMSkin.Windows")]
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_Controls", "RRQMSkin.Controls")]
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_DragDrop", "RRQMSkin.DragDrop")]
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_Charts", "RRQMSkin.Charts")]

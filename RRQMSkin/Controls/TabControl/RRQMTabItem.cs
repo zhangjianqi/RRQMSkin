@@ -1,4 +1,6 @@
 ﻿using System.Windows.Controls;
+using System.Windows.Input;
+using RRQMMVVM;
 
 namespace RRQMSkin.Controls
 {
@@ -6,10 +8,10 @@ namespace RRQMSkin.Controls
     {
         public RRQMTabItem()
         {
-            this.CloseItemCommand = new Command(CloseItem);
+            this.CloseItemCommand = new ExecuteCommand(CloseItem);
         }
 
-        public Command CloseItemCommand { get; set; }
+        public ExecuteCommand CloseItemCommand { get; set; }
 
         private void CloseItem()
         {

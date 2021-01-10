@@ -10,3 +10,10 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CoreCompileInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Charts.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Button.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Controls.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\ItemsControl.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMMVVM.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete

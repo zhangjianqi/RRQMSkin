@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -12,7 +13,7 @@ namespace RRQMSkin.Controls
     /// <summary>
     /// 水波纹按钮
     /// </summary>
-    public class CorrugatedButton : Button
+    public class CorrugatedButton : ButtonBase
     {
         static CorrugatedButton()
         {
