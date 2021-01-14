@@ -121,10 +121,9 @@
                                               Fill="{TemplateBinding Background}"
                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0" Stroke="Transparent" />
                             <primitive:Sector x:Name="sector"
-                                              EndAngle="{TemplateBinding Angle}"
                                               Fill="{TemplateBinding Foreground}"
                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both" StartAngle="0" Stroke="Transparent" />
-                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Progress, StringFormat=0.00%}"
+                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Value, StringFormat=0.00%}"
                                        HorizontalAlignment="Center" VerticalAlignment="Center"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"

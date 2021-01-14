@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls.Primitives;
+using RRQMSkin.Charts.Primitives;
 
 namespace RRQMSkin.Controls
 {
@@ -14,37 +15,14 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RoundProgressBar), new FrameworkPropertyMetadata(typeof(RoundProgressBar)));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-        [Browsable(false)]
-        public double Angle
+        Sector sector;
+        public override void OnApplyTemplate()
         {
-            get { return (double)GetValue(AngleProperty); }
-            private set { SetValue(AngleProperty, value); }
+            base.OnApplyTemplate();
+
+            sector = (Sector)this.Template.FindName("sector", this);
+
         }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static readonly DependencyProperty AngleProperty =
-            DependencyProperty.Register("Angle", typeof(double), typeof(RoundProgressBar), new PropertyMetadata(0.0));
-
-        /// <summary>
-        /// 进度比
-        /// </summary>
-        public double Progress
-        {
-            get { return (double)GetValue(ProgressProperty); }
-            private set { SetValue(ProgressProperty, value); }
-        }
-
-        /// <summary>
-        /// 进度比属性
-        /// </summary>
-        public static readonly DependencyProperty ProgressProperty =
-            DependencyProperty.Register("Progress", typeof(double), typeof(RoundProgressBar), new PropertyMetadata(0.0));
-
         /// <summary>
         ///
         /// </summary>
@@ -80,8 +58,12 @@ namespace RRQMSkin.Controls
 
         private void OnChanged()
         {
-            this.Progress = this.Value / (this.Maximum - this.Minimum);
-            this.Angle = this.Progress * 360;
+            if (this.sector == null)
+            {
+                return;
+            }
+            double progress = this.Value / (this.Maximum - this.Minimum);
+            this.sector.EndAngle = this.sector.StartAngle + progress * 360;
         }
     }
 }

@@ -17,3 +17,4 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\DataTemplate.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\ItemsControl.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMMVVM.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache
