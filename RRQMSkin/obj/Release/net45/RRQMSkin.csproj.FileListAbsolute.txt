@@ -37,3 +37,10 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.csproj.CoreCompileInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\net45\RRQMMVVM.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\Button.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\Charts.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\Controls.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\ItemsControl.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.csproj.CopyComplete

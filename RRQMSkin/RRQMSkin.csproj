@@ -35,11 +35,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\iconfont.ttf" />
     <None Remove="Icons\RRQM.ico" />
-    <None Remove="Icons\关闭.png" />
-    <None Remove="Icons\最大化.png" />
-    <None Remove="Icons\最小化.png" />
-    <None Remove="Icons\正常.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,11 +55,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
-    <Resource Include="Icons\关闭.png" />
-    <Resource Include="Icons\最大化.png" />
-    <Resource Include="Icons\最小化.png" />
-    <Resource Include="Icons\正常.png" />
   </ItemGroup>
 
 </Project>
